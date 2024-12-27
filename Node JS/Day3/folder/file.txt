@@ -1,0 +1,11 @@
+'https://www.example.com:8080/pathname?search=test#hash'
+const urlObject = {
+  protocol: 'https:',
+  hostname: 'www.example.com',
+  port: 8080,
+  pathname: '/pathname',
+  search: '?search=test',
+  hash: '#hash'
+};
+const baseUrl = 'https://www.example.com/pathname/';
+const relativeUrl = 'page.html';
