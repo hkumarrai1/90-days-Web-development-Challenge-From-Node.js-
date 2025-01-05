@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+  </head>
+  <body>
+    <h1>
+      <% if (user) { %>
+      <p>Welcome, <%= user.name %>!</p>
+      <% } else { %>
+      <p>Welcome, Guest!</p>
+      <% } %>
+    </h1>
+    <%- include('header') %>
+    <!-- Includes the header partial -->
+    <p>Dynamic content: <%= message %></p>
+    <p>Here is the list of items</p>
+    <ul>
+      <% for (let i = 0; i < items.length; i++) { %>
+      <li><%= items[i] %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
